@@ -1,0 +1,1 @@
+#include "simulador.h" // isso ja da include em td que precisa
