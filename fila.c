@@ -63,5 +63,12 @@ Cliente dequeue(Fila* fila)
 
 void destruirFila(Fila* fila_para_destruir)
 {
-    // depois faço
+    if (fila_para_destruir == NULL) return;
+    
+    while (!filaVazia(fila_para_destruir))
+    {
+        dequeue(fila_para_destruir);
+    }
+
+    free(fila_para_destruir);
 }
