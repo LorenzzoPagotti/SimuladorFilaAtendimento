@@ -1,5 +1,4 @@
 #include "fila.h"
-#include <stdio.h>
 
 
 Fila* criarFila()
