@@ -3,12 +3,17 @@
 
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct Cliente
 {
     int id_cliente;
 
     int tempo_chegada; // MINUTOS que o cliente chegou (de 1 até 59)
+
+    char nome[50];
+
+    int tempo_estimado_atendimento;
 
 } Cliente;
 
@@ -41,5 +46,7 @@ void enqueue(Fila* fila, Cliente cliente);
 Cliente dequeue(Fila* fila); // depois de tirar alguem da fila, ela vai retornar quem ela tirou. importantissimo pra calcular o tempo e pegar as informacoes do cliente
 
 void destruirFila(Fila* fila_para_destruir);
+
+void imprimirFila(Fila* fila);
 
 #endif

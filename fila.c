@@ -71,3 +71,26 @@ void destruirFila(Fila* fila_para_destruir)
 
     free(fila_para_destruir);
 }
+
+void imprimirFila(Fila* fila)
+{
+    if (filaVazia(fila))
+    {
+        printf("fila vazia\n");
+        return;
+    }
+
+    printf("\n--- STATUS ATUAL DA FILA ---\n");
+    
+    No* no_atual = fila->head;
+    int posicao = 1;
+
+    while (no_atual != NULL)
+    {
+        printf("%d da fila | Nome: %s | Chegou no min: %d\n", posicao, no_atual->info_cliente.nome, no_atual->info_cliente.tempo_chegada);
+
+        no_atual = no_atual->proximo_no;
+        posicao++;
+    }
+    printf("----------------------------\n");
+}
