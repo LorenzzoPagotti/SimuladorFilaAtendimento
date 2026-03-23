@@ -3,9 +3,9 @@
 #include "fila.h"
 #include <stdlib.h>
 
-int executarSimulacao(int tempo_total_minutos);
-int gerar_numero_rand(void);
-int imprimir_estatisticas(int tempo_total, int n_clientes_atendidos);
+void executarSimulacao(int tempo_total_minutos);
+void gerar_numero_rand(void);
+void imprimir_estatisticas(int tempo_total, int n_clientes_atendidos);
 
 
 
