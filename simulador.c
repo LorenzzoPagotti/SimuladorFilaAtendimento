@@ -2,8 +2,12 @@
 
 void executarSimulacao(int tempo_total_minutos)
 {
+    int tempo_espera_total = 0;
     int numero_limite = 100;
     int id = 0;
+    int caixa_livre = 1;
+
+    Fila *Fila_nova = criarFila();
 
     for (int i = 0; i < tempo_total_minutos; i++)
     {
@@ -22,10 +26,31 @@ void executarSimulacao(int tempo_total_minutos)
                 printf("Número máximo de clientes atingido\n");
                 break;
             }
+
+            enqueue(Fila_nova, Novo_Cliente);
         }
         else
         {
             printf("Que azar... Cliente não encontrado XD\n");
         }
+
+        if (caixa_livre == 1 && !filaVazia(Fila_nova))
+        {
+            Cliente clinte_atendido = dequeue(Fila_nova);
+            int tempo_esperado = i - clinte_atendido.tempo_chegada;
+            tempo_espera_total += tempo_esperado;
+            caixa_livre = 0;
+        }
+
+        caixa_livre = 1;
     }
+
+    if(id > 0)
+    {
+        imprimir_estatisticas(tempo_espera_total, id);
+    }
+    
+    
+
+    destruirFila(Fila_nova);
 }
