@@ -4,6 +4,7 @@ int main()
 {
     int opcao;
     int tempo;
+    srand(time(NULL));
 
     do
     {
