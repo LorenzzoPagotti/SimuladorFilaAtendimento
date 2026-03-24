@@ -51,7 +51,7 @@ void executarSimulacao(int tempo_total_minutos)
 
             printf("Cliente %d atendido com sucesso! Tempo aguardando na fila: %d min\n", cliente_atendido.id_cliente, tempo_esperado);
         }
-        Sleep(2000);
+        Sleep(1500);
     }
 
     if (id > 0)
