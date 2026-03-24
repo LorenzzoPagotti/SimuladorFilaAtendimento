@@ -9,7 +9,7 @@ int main()
     do
     {
         printf("=== SIMULADOR DE FILA DE ATENDIMENTO ===");
-        printf("\n1. Rodar Simulação");
+        printf("\n1. Rodar Simulacao");
         printf("\n2. Sair");
 
         scanf("%d", &opcao);
@@ -27,7 +27,7 @@ int main()
             break;
 
         default:
-            printf("Opção inválida!\n");
+            printf("Opcao invalida!\n");
         }
 
     } while (opcao != 2);
