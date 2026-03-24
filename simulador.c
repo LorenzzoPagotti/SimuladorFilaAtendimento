@@ -8,11 +8,11 @@ void imprimir_estatisticas(tempo_espera_total, id)
         printf("\n--- RESULTADO FINAL DA SIMULACAO ---\n");
         printf("Total de clientes atendidos: %d\n", id);
         printf("Tempo de espera total: %d minutos\n", tempo_espera_total);
-        printf("Tempo Médio de Espera: %d minutos\n", tempo_medio);
+        printf("Tempo Medio de Espera: %d minutos\n", tempo_medio);
     }
     else
     {
-        printf("\nNenhum cliente foi atendido na simulação.\n");
+        printf("\nNenhum cliente foi atendido na simulacao.\n");
     }
 }
 
@@ -31,7 +31,7 @@ void executarSimulacao(int tempo_total_minutos)
 
         if (valor_aleatorio > 50)
         {
-            printf("Cliente encontrado!\n Tempo até achar: %d\n", i);
+            printf("Cliente encontrado!\n Tempo ate achar: %d\n", i);
 
             Cliente Novo_Cliente;
             Novo_Cliente.id_cliente = id++;
@@ -39,7 +39,7 @@ void executarSimulacao(int tempo_total_minutos)
 
             if (Novo_Cliente.id_cliente == 100)
             {
-                printf("Número máximo de clientes atingido\n");
+                printf("Numero maximo de clientes atingido\n");
                 break;
             }
 
@@ -47,7 +47,7 @@ void executarSimulacao(int tempo_total_minutos)
         }
         else
         {
-            printf("Que azar... Cliente não encontrado XD\n");
+            printf("Que azar... Cliente nao encontrado XD\n");
         }
 
         if (caixa_livre == 1 && !filaVazia(Fila_nova))
