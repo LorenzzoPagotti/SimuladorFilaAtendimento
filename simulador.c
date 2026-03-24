@@ -1,21 +1,5 @@
 #include "simulador.h"
 
-void imprimir_estatisticas(tempo_espera_total, id)
-{
-    if (id > 0)
-    {
-        int tempo_medio = tempo_espera_total / id;
-        printf("\n--- RESULTADO FINAL DA SIMULACAO ---\n");
-        printf("Total de clientes atendidos: %d\n", id);
-        printf("Tempo de espera total: %d minutos\n", tempo_espera_total);
-        printf("Tempo Medio de Espera: %d minutos\n", tempo_medio);
-    }
-    else
-    {
-        printf("\nNenhum cliente foi atendido na simulacao.\n");
-    }
-}
-
 void executarSimulacao(int tempo_total_minutos)
 {
     int tempo_espera_total = 0;
@@ -61,7 +45,18 @@ void executarSimulacao(int tempo_total_minutos)
         caixa_livre = 1;
     }
 
-    imprimir_estatisticas(tempo_espera_total, id);
+    if (id > 0)
+    {
+        int tempo_medio = tempo_espera_total / id;
+        printf("\n--- RESULTADO FINAL DA SIMULACAO ---\n");
+        printf("Total de clientes atendidos: %d\n", id);
+        printf("Tempo de espera total: %d minutos\n", tempo_espera_total);
+        printf("Tempo Medio de Espera: %d minutos\n", tempo_medio);
+    }
+    else
+    {
+        printf("\nNenhum cliente foi atendido na simulacao.\n");
+    }
 
     destruirFila(Fila_nova);
 }
