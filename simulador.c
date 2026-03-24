@@ -55,7 +55,7 @@ void executarSimulacao(int tempo_total_minutos)
     }
     else
     {
-        printf("\nNenhum cliente foi atendido na simulacao.\n");
+        printf("\n\nNenhum cliente foi atendido na simulacao.\n\n");
     }
 
     destruirFila(Fila_nova);

@@ -8,10 +8,11 @@ int main()
 
     do
     {
-        printf("=== SIMULADOR DE FILA DE ATENDIMENTO ===");
+        printf("\n\n=== SIMULADOR DE FILA DE ATENDIMENTO ===\n");
         printf("\n1. Rodar Simulacao");
-        printf("\n2. Sair");
+        printf("\n2. Sair\n");
 
+        printf ("Digite uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao)
