@@ -50,6 +50,8 @@ void executarSimulacao(int tempo_total_minutos)
             int tempo_esperado = i - cliente_atendido.tempo_chegada;
             tempo_espera_total += tempo_esperado;
 
+            clientes_atendidos++;
+
             tempo_restante_caixa = cliente_atendido.tempo_estimado_atendimento;
 
             printf("<- %s foi chamado pelo caixa. Tempo aguardando na fila: %d min\n", cliente_atendido.nome, tempo_esperado);
