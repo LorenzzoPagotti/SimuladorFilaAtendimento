@@ -1,4 +1,4 @@
-#include "simulador.h" // isso ja da include em td que precisa
+#include "simulador.h"
 
 int main()
 {
@@ -13,14 +13,28 @@ int main()
         printf("\n2. Sair\n");
 
         printf ("Digite uma opcao: ");
-        scanf("%d", &opcao);
+        
+        if (scanf("%d", &opcao) != 1) 
+        {
+            while (getchar() != '\n'); 
+            
+            opcao = 0; 
+        }
 
         switch (opcao)
         {
         case 1:
             printf("Quantos minutos a simulacao deve durar? ");
-            scanf("%d", &tempo);
-            executarSimulacao(tempo);
+            
+            if (scanf("%d", &tempo) != 1) 
+            {
+                while (getchar() != '\n');
+                printf("Erro: Voce deve digitar um numero inteiro para o tempo!\n");
+            }
+            else 
+            {
+                executarSimulacao(tempo);
+            }
             break;
 
         case 2:
@@ -28,7 +42,7 @@ int main()
             break;
 
         default:
-            printf("Opcao invalida!\n");
+            printf("Opcao invalida! Digite 1 ou 2.\n");
         }
 
     } while (opcao != 2);
